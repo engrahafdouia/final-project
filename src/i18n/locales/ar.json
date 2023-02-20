@@ -1,0 +1,78 @@
+{
+  "message": {
+    "Who I":"من أنا ",
+    "Download":"  للتحميل السيرة الذاتية  ",
+    "Download link":" تحميل ",
+    "Contact Me":"تواصل معي",
+    "cat":"أفضل الأنواع",
+
+    "bodyabout":"     أنا اسمي رهف دويعر أنا ادرس في الهندسة المعلوماتية في جامعة دمشق وأنا أعمل كمطورة الواجهة الأمامية  و لدي مهارات عديدة:Html,css , bulma , js ,Vuejs FrameWork ولدي القدرة على إنشاء مواقع ويب بتصميم جيد  للتواصل معي يوجد في أسفل روابط تواصل ",
+    "profile":  "الملف الشخصي",
+    "hello": "مرحباً أيها العالم",
+    "Our Team": "فريقنا",
+    "Home":"الرئيسية",
+    "About":"من نحن",
+    "Products":"المنتجات",
+    "Contact":"تواصل",
+    "Login":"سجل دخول",
+    "Admin":"مدير",
+    "shop now":"تسوق الاّن ",
+    "  Sale":"حسومات بقيمة 20 مع sales",
+    "Feature":"الميزات",
+    "Welcome":"  مرحبا بكم بمتجر التسوق ",
+    "Cart":"سلة تسوق",
+    "settings":"الإعدادات",
+    "FAQs &Questions":"الأسئلة المتكررة",
+    "GET IN TOUCH":"لتبقى على تواصل",
+    "bodyTouch":"  أي سؤال ؟ ممكن تتعرف علينا في متجرنا في طابق الثامن دمشق سوريا للتواصل معنا على هذده الأرقام (+1) 96 716 6879",
+    "SUBSCRIBE":"اشترك معنا"  ,
+    "Design By":"صمم من قبل",
+    "RAHAF DOUAIR":"رهف دويعر",
+    "Accidental appearances":" حسومات متنوعة",
+    "testmonails":"اّراء الزبائن",
+    "Track Order":"طلبات الجديدة",
+   " Returns": " الاّراء",
+    "Shipping": "تسويق",
+    "FAQs":"الأسئلة المتكررة",
+    "help":"المساعدة",
+    "Best Seller":"الأفضل مبيعاً",
+    "NEWSLETTER":"جديدنا",
+    "Technologies":"التقنيات",
+    "Our Teams":"فريقنا",
+    "Timline Course":"مراحل الزمنية للكورس  ",
+    "logout":"تسجيل خروج",
+    "home-decoration":"ديكورات منزلية",
+    "groceries":"السلع",
+    "skincare":"منتجات للبشرة",
+    "fragrances":"العطور",
+    "laptops":"الأجهزة المحمولة",
+    "smartphones":"هواتف المحمولة",
+    "CATEGORIES":"الأصناف",
+    "portifoil":"معرض الأعمال"
+  },
+  "Our Team": "فريقنا",
+  "featuresSection": {
+    "title": "ميزاتنا",
+    "body":"  ولتعرف ميزاتنا ولتتعرف أكثر علينا",
+    "deverliy":"توصيل سريعة",
+    "Free":"مجانية",
+    "quality":"نوعية جيدة",
+    "home":" home ",
+    "about":"من نحن",
+    "products":"منتجات",
+    "contact":"تواصل",
+    "login":"سجل",
+    "ABOUT US":"من نحن",
+    "timeline":"مراحل الزمنية",
+    "Sale 20% Off":"تنزيلات بحسم 20%",
+
+    "Web Developement":"تطوير الويب",
+    "Web design":"تصميم الويب",
+    "Problem solving":"تفكير منطقي"
+    
+
+   
+ 
+  }
+
+}
