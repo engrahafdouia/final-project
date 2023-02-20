@@ -1,168 +1,184 @@
 <template>
-    <section class="team text-center pt-16 pb-16">
-        <div class="team-title pt-6">
-            <h1 class="text-h4 font-weight-bold pb-2 text-uppercase">
-                <!-- OUR AMAZING TEAM --> {{ $t('message.team.sectionName') }}
-            </h1>
-            <p class="text-grey font-italic">{{ $t('message.team.title') }}</p>
-        </div>
-        <div class="team-content mt-12 ">
-            <v-container>
-                <v-row no-gutters >
-                    <!--   v-for="team in teamList" :key="team.id"   -->
-                    <v-col cols="12"
-                        class="d-flex  mb-6 justify-space-around">
-                        <!--  <div>
-                          src="/assets/images/team/1.jpg" :src="getImageUrl"
-                            <v-img src="/assets/images/team/team1.jpg" height="200px" width="200px" cover class="rounded-circle"
-                              style="border:8px solid rgb(193 193 193 / 66%);"></v-img>
-                            <h3 class="mt-6 font-weight-black" color="#212529">{{ team . title }}</h3>
-                            <p class="mt-2 mb-4" color="#6c757d">{{ team . explain }}</p>
-                            <a href="#" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-twitter
-                                </v-icon>
-                            </a>
-                            <a :href="team.href" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-github
-                                </v-icon>
-                            </a>
-                            <a href="#" class="ma-2">
-                                <v-icon x-large color="black">
-                                    mdi-linkedin
-                                </v-icon>
-                            </a>
+  <section class="sect">
+    <v-container>
+      <h2 class="text-h4 text-center font-weight-bold mb-8">{{ $t('message.Our Teams') }}</h2>
 
-                        </div> -->
-                        <div>
-                            <!--  src="/assets/images/team/1.jpg" :src="getImageUrl"-->
-                            <v-img src="/assets/images/team/team1.jpg" height="200px" width="200px" cover class="rounded-circle"
-                              style="border:8px solid rgb(193 193 193 / 66%);"></v-img>
-                            <h3 class="mt-6 font-weight-black" color="#212529">Roduan Kareem Aldeen</h3>
-                            <p class="mt-2 mb-4" color="#6c757d">FullStack Developer</p>
-                            <a href="#" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-twitter
-                                </v-icon>
-                            </a>
-                            <a href="https://github.com/RoduanKD" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-github
-                                </v-icon>
-                            </a>
-                            <a href="#" class="ma-2">
-                                <v-icon x-large color="black">
-                                    mdi-linkedin
-                                </v-icon>
-                            </a>
+    <v-row>
+    <v-col cols="12" md="3" class="mx-auto">
+    <v-hover v-slot="{ isHovering, props }">
+        <v-card
+          class="mx-auto bg-indigo-lighten-5"
+          max-width="244"
+          v-bind="props"
+        >
+          <v-img src="../images.jpg"  height="250"></v-img>
+          <v-card-text>
+            <h2 class="text-h6 text-primary">
+             Rahaf Douair
+            </h2>
+    Junior Frontend developer
+          </v-card-text>
+          <v-card-title>
+            <!-- <v-rating
+              :model-value="4"
+              dense
+              color="orange"
+              background-color="orange"
+              hover
+              class="me-2"
+            ></v-rating>
+            <span class="text-primary text-subtitle-2">64 Reviews</span> -->
+          </v-card-title>
+          <v-overlay
+            :model-value="isHovering"
+            contained
+            class="align-center justify-center"
+          >
+          <v-btn  href="https://github.com/engrahafdouia/"
+              target="_blank" >
+            <v-icon>mdi-github</v-icon>
+            </v-btn>
+            <v-btn               href="www.linkedin.com/in/rahaf-douair-5923001bb "
+              target="_blank" >
+            <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+          </v-overlay>
+        </v-card>
+      </v-hover>
 
-                        </div>
-                        <div>
+    </v-col>
+    <v-col cols="12" md="3" class="mx-auto">
+    <v-hover v-slot="{ isHovering, props }">
+        <v-card
+          class="mx-auto bg-indigo-lighten-5"
+          max-width="244"
+          v-bind="props"
+        >
+          <v-img src="../assets/tasssir.jpg" width="244"></v-img>
+          <v-card-text>
+            <h2 class="text-h6 text-primary">
+            Tassier Al madani
+            </h2>
+    Coach & web developer
+          </v-card-text>
+          <v-card-title>
+            <!-- <v-rating
+              :model-value="4"
+              dense
+              color="orange"
+              background-color="orange"
+              hover
+              class="me-2"
+            ></v-rating>
+            <span class="text-primary text-subtitle-2">64 Reviews</span> -->
+          </v-card-title>
+            <v-overlay
+            :model-value="isHovering"
+            contained
+            class="align-center justify-center"
+          >
+            <v-btn >
+            <v-icon>mdi-facebook</v-icon>
+            </v-btn>
+            <v-btn >
+            <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+          </v-overlay>
+        </v-card>
+      </v-hover>
 
-                            <v-img  src="/assets/images/team/team3.jpg" height="200px" width="200px" cover class="rounded-circle"
-                              style="border:8px solid rgb(193 193 193 / 66%);"></v-img>
-                            <h3 class="mt-6 font-weight-black" color="#212529">Majida Khoulani</h3>
-                            <p class="mt-2 mb-4" color="#6c757d">'Frontend Developer'</p>
-                            <a href="#" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-twitter
-                                </v-icon>
-                            </a>
-                            <a href="https://github.com/majidakhoulani" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-github
-                                </v-icon>
-                            </a>
-                            <a href="#" class="ma-2">
-                                <v-icon x-large color="black">
-                                    mdi-linkedin
-                                </v-icon>
-                            </a>
+    </v-col>
+    <v-col cols="12" md="3" class="mx-auto">
+    <v-hover v-slot="{ isHovering, props }">
+        <v-card
+          class="mx-auto bg-indigo-lighten-5"
+          max-width="244"
+          v-bind="props"
+        >
+          <v-img src="../assets/Rphoto_٢٠٢٢-٠١-١٠_١٦-٢٥-١٤.jpg" width="244" ></v-img>
+          <v-card-text>
+            <h2 class="text-h6 text-primary">
+         Raduon Abd Alkareem
+            </h2>
+    Coach & Fullstack developer
+          </v-card-text>
+          <v-card-title>
+            <!-- <v-rating
+              :model-value="4"
+              dense
+              color="orange"
+              background-color="orange"
+              hover
+              class="me-2"
+            ></v-rating> -->
+            <!-- <span class="text-primary text-subtitle-2">64 Reviews</span> -->
+          </v-card-title>
+          <v-overlay
+            :model-value="isHovering"
+            contained
+            class="align-center justify-center"
+          >
+            <v-btn  href="http://github.com/RoduanKD"
+              target="_blank" >
+            <v-icon>mdi-github</v-icon>
+            </v-btn>
+            <v-btn               href="www.linkedin.com/in/rahaf-douair-5923001bb "
+              target="_blank" >
+            <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+          </v-overlay>
+        </v-card>
+      </v-hover>
 
-                        </div>
-                        <div>
-                            <v-img  src="/assets/images/team/team2.jpg" height="200px" width="200px" cover class="rounded-circle"
-                              style="border:8px solid rgb(193 193 193 / 66%);"></v-img>
-                            <h3 class="mt-6 font-weight-black" color="#212529">Taiseer Almedani</h3>
-                            <p class="mt-2 mb-4" color="#6c757d">FullStack Developer</p>
-                            <a href="#" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-twitter
-                                </v-icon>
-                            </a>
-                            <a href="https://github.com/TaiseerAlmedani" class="ma-2">
-                                <v-icon color="black">
-                                    mdi-github
-                                </v-icon>
-                            </a>
-                            <a href="#" class="ma-2">
-                                <v-icon x-large color="black">
-                                    mdi-linkedin
-                                </v-icon>
-                            </a>
+    </v-col>
+    </v-row>
+    <!-- <v-row><v-col v-for="i in 4" :key="i">
+    <v-card
 
-                        </div>
+    max-width="344"
+    color="grey-lighten-4"
 
-                    </v-col>
-                    <v-col cols="6" class="text-center ma-auto mt-8">
-                        <p color="#6c757d">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque,
-                            laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </div>
-    </section>
+    >
+    <v-img
+    src="../assets/Rphoto_٢٠٢٢-٠١-١٠_١٦-٢٥-١٤.jpg" width="344"
+    height="200px"
+    ></v-img>
+    <v-card-title>
+    Raduan bd kareem
+    </v-card-title>
+    <v-card-subtitle>
+    position:expert coach
+    </v-card-subtitle>
+    <v-card-text>backend % frontend</v-card-text>
+
+    <v-card-actions>
+    <v-btn
+    class="bg-shoco"
+      color="blue lighten-2"
+      text
+    >
+     contact
+    </v-btn>
+    <v-spacer></v-spacer>
+    </v-card-actions>
+    </v-card>
+    </v-col></v-row> -->
+    </v-container>
+  </section>
+
+  <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi molestiae numquam dolore temporibus, perspiciatis deserunt veritatis quis consequuntur quidem iste rerum itaque, minima vitae asperiores quo, ex reiciendis reprehenderit voluptatem. -->
 </template>
 
+<script>
+export default {
 
-<script setup>
-    // import team1 from '/assets/images/team/team1.jpg'
-    // import team2 from '/assets/images/team/team2.jpg'
-    // import team3 from '/assets/images/team/team3.jpg'
-    // const  photos = [new URL ("/assets/images/team/team1.jpg",import.meta.url).href,
-    // new URL ("/assets/images/team/team2.jpg",import.meta.url).href,
-    // new URL ("/assets/images/team/team3.jpg",import.meta.url).href]
-//     export default {
-//         setup() {
-//   const getImageUrl = (name) => {
-//         return new URL(`/assets/images/team/${name}.jpg`, import.meta.url).href
-//     }
-// },
-//         data: () => ({
-//             teamList: [{
-//                     id: 1,
-//                     src: '1',
-//                     title: 'Roduan Kareem Aldeen',
-//                     explain: 'FullStack Developer',
-//                     href: 'https://github.com/RoduanKD'
 
-//                 },
-//                 {
-//                     id: 2,
-//                     src: '3',
-//                     title: 'Majida Khoulani',
-//                     explain: 'Frontend Developer',
-//                     href: 'https://github.com/majidakhoulani'
-//                 },
-//                 {
-//                     id: 3,
-//                     src: '2',
-//                     title: 'Taiseer Almedani',
-//                     explain: 'FullStack Developer',
-//                     href: 'https://github.com/TaiseerAlmedani'
-//                 },
-//             ],
-//         }),
-//     }
+}
+
 </script>
-
 <style>
-    .team {
-        background-color: #F8F9FA;
-    }
+ .sect{
+    background-color: #5671891f;
 
-    .team-content a {
-        text-decoration: none;
-    }
+  }
 </style>

@@ -1,8 +1,9 @@
 <template>
  <HeroSection title="Welcome To Our Studio!" >
  </HeroSection>
+ <MostSection/>
 <ServiceSection/>
- <PortfolioSection/>
+
 
 <TeamSection/>
 <SponserSection/>
@@ -14,7 +15,7 @@
 <script>
   import HeroSection from '@/components/HeroSection.vue';
 import ServiceSection from '@/components/ServiceSection.vue';
-import PortfolioSection from  '@/components/PortfolioSection.vue'
+
 
 import TeamSection from '@/components/TeamSection.vue';
 import TestimonialsSection from '@/components/TestimonialsSection.vue';
@@ -28,7 +29,7 @@ import FooterSection from '@/components/FooterSection.vue';
 
     HeroSection,
     ServiceSection,
-    PortfolioSection,
+
 
     TeamSection,
     TestimonialsSection,
