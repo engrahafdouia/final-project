@@ -107,18 +107,7 @@ const routes = [
 const router = createRouter({
  history: createWebHistory(process.env.NODE_ENV === "production" ? "/final-project/" : "/"),
  routes,
- scrollBehavior(to, from, savedPosition) {
-   if (savedPosition) {
-       return savedPosition;
 
-   }
-
-    else if (to.hash) {
-       return { selector: to.hash,
-         behavior:'smooth'};
-   }
-return { top:500}
-},
 
 })
 
@@ -129,12 +118,27 @@ router.beforeEach(function (to, from, next) {
   if (to.meta.guard === 'auth' && !store.isLoggedIn) {
     next('/login')
   }
-  else if (to.meta.guard === 'vistor' && store.isLoggedIn) {
-    next('/profile')
-  }
+  // else if (to.meta.guard === 'vistor' && store.isLoggedIn) {
+  //   next('/profile')
+  // }
   else
     next()
 })
+router.afterEach(() => {
+  window.scrollTo(0, 0);
+});
+// scrollBehavior(to, from, savedPosition) {
+//   if (savedPosition) {
+//       return savedPosition;
+
+//   }
+
+//    else if (to.hash) {
+//       return { selector: to.hash,
+//         behavior:'smooth'};
+//   }
+// return { top:500}
+// },
 
 
 export default router

@@ -1,24 +1,34 @@
 <template>
- <HeroSection title="Welcome To Our Studio!" src="/assets/about2.jpg"/>
+
 <AboutSection id="aboutSection"/>
+
 <TeamSection/>
-  <TheFooter />
+ <TimelineSection/>
+ <v-divider></v-divider>
+
+
+
+<StudentInfo/>
+<TechnologiesSection/>
+<OurTeamSection/>
 </template>
 
 
 <script>
-  import HeroSection from '@/components/HeroSection.vue';
-import TheFooter from '@/components/TheFooter.vue';
+import StudentInfo from '@/components/StudentInfo.vue';
 import AboutSection from '@/components/AboutSection.vue';
 import TeamSection from '@/components/TeamSection.vue';
+import TechnologiesSection from '@/components/TechnologiesSection.vue';
+import TimelineSection from '@/components/TimelineSection.vue';
 
   export default {
       components: {
     // TheNavbar,
-    TheFooter,
-    HeroSection,
     AboutSection,
-    TeamSection
+    TeamSection,
+    TimelineSection,
+    TechnologiesSection,
+    StudentInfo
 },
 
       data: () => ({

@@ -11,7 +11,7 @@
           max-width="244"
           v-bind="props"
         >
-          <v-img src="../images.jpg"  height="250"></v-img>
+          <v-img src="/assets/images/team/testimonial-2.jpg"  height="250"></v-img>
           <v-card-text>
             <h2 class="text-h6 text-primary">
              Rahaf Douair
@@ -54,7 +54,7 @@
           max-width="244"
           v-bind="props"
         >
-          <v-img src="../assets/tasssir.jpg" width="244"></v-img>
+          <v-img src="/assets/images/team/tasssir.jpg" width="244"></v-img>
           <v-card-text>
             <h2 class="text-h6 text-primary">
             Tassier Al madani
@@ -95,7 +95,7 @@
           max-width="244"
           v-bind="props"
         >
-          <v-img src="../assets/Rphoto_٢٠٢٢-٠١-١٠_١٦-٢٥-١٤.jpg" width="244" ></v-img>
+          <v-img src="/assets/images/team/rodaun.jpg" width="244" ></v-img>
           <v-card-text>
             <h2 class="text-h6 text-primary">
          Raduon Abd Alkareem

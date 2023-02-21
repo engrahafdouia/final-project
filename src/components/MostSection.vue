@@ -15,7 +15,7 @@
               <v-img
                 :aspect-ratio="16 / 9"
                 cover
-                src="../assets/dell-SGY0LIfTKZ4-unsplash.jpg"
+                src="/assets/dell-SGY0LIfTKZ4-unsplash.jpg"
               >
                 <v-expand-transition>
                   <div
@@ -48,7 +48,7 @@
               <v-img
                 :aspect-ratio="16 / 9"
                 cover
-                src="../assets/imgmost.jpg"
+                src="/assets/imgmost.jpg"
               >
                 <v-expand-transition>
                   <div
@@ -81,7 +81,7 @@
               <v-img
                 :aspect-ratio="16 / 9"
                 cover
-                src="../assets/mo.jpg"
+                src="/assets/mo.jpg"
               >
                 <v-expand-transition>
                   <div
@@ -114,7 +114,7 @@
               <v-img
                 :aspect-ratio="16 / 9"
                 cover
-                src="../assets/TSC-Jul202-768x512.webp"
+                src="/assets/TSC-Jul202-768x512.webp"
               >
                 <v-expand-transition>
                   <div
@@ -147,7 +147,7 @@
               <v-img
                 :aspect-ratio="16 / 9"
                 cover
-                src="../assets/most.jpg"
+                src="/assets/most.jpg"
               >
                 <v-expand-transition>
                   <div
@@ -180,7 +180,7 @@
               <v-img
                 :aspect-ratio="16 / 9"
                 cover
-                src="../assets/211213-wee-groceries-se-405p-a36212.jpg"
+                src="/assets/211213-wee-groceries-se-405p-a36212.jpg"
               >
                 <v-expand-transition>
                   <div

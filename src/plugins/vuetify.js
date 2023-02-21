@@ -34,10 +34,17 @@ export default createVuetify({
       },
       dark: {
         colors: {
-          // primary: '#white',
-       //   secondary: '#5CBBF6',
-        },
-      },
+          // primary: '#ff00ff',
+          greenlight:'#eee',
+          myblue:'#fff',
+          grey:'#888',
+          purpleblue:'#2333B0',
+          purpleme:'#2333B0',
+          bluedark:"#5671891f"
+
+
+        }
+    },
     },
   },
 })

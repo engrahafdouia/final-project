@@ -1,59 +1,83 @@
- <template>
-     <section class="login text-center pt-16 pb-16">
-         <div class="login-title pt-6">
-             <h1 class="text-h4 font-weight-bold pb-2 text-dark">Login In</h1>
-             <p class="text-grey font-italic">Welcome To Our Website</p>
-         </div>
-         <div class="login-content mt-12 ">
-             <v-container>
-                 <v-row no-gutters>
-                     <v-col cols="4" class="ma-auto">
-                         <v-form @submit.prevent="submit">
-                             <v-text-field v-model="username" label="User Name"></v-text-field>
+<template>
 
-                             <v-text-field v-model="password" type="password" label="Password">
-                             </v-text-field>
-                             <v-btn color="#ffc800" elevation="2" class="mt-12 pa-2 h-50" width="150px"
-                                 type="submit">
-                                 <span class="text-white text-uppercase text-h6">LogIn</span>
-                             </v-btn>
-                         </v-form>
-                     </v-col>
-                 </v-row>
-             </v-container>
-         </div>
-     </section>
+  <section>
+    <v-container>
+      <v-row
 
-     <TheFooter />
- </template>
- <script>
-     import {
-         mapActions
-     } from 'pinia';
-     import {
-         useUserStore
-     } from '@/store/User';
-     import TheFooter from '@/components/TheFooter.vue';
-     export default {
-         components: {
-             TheFooter,
-         },
-         data() {
-             return {
-                 username: 'kminchelle',
-                 password: '0lelplR',
-             }
-         },
-         methods: {
-             submit() {
-                 this.login(this.username, this.password)
-             },
-             ...mapActions(useUserStore, ['login'])
-         }
-     }
- </script>
- <style>
-     .login {
-         background-color: #F8F9FA;
-     }
- </style>
+      >
+        <v-col
+          cols="12"
+          lg="4"
+        >
+
+           <v-img src="/assets/undraw_sign_.svg"  class="py-6"></v-img>
+
+        </v-col>
+        <v-col
+          cols="12"
+          lg="5"
+        >
+          <v-card>
+            <v-card-title>Login</v-card-title>
+            <v-form @submit.prevent="submit">
+              <v-card-text>
+                <v-text-field class="px-6" clearable  variant="underlined" color="indigo" v-model="username" />
+                <v-text-field
+                  v-model="password" class="px-6"
+                  type="password" clearable  variant="underlined" color="indigo"
+                />
+                <!-- <v-btn
+                  type="submit" class="px-6"
+                  rounded="pill"  color="purpleme"
+                >
+                  Login
+                </v-btn> -->
+                <v-btn
+                  type="submit" class="px-6" to="/profile"
+                  rounded="pill"  color="purpleme"
+                >
+                  Login
+                </v-btn>
+                <!-- <v-btn color="primary"  type="submit" class="mr-4 w-100" to="/">
+                USER
+              </v-btn>
+              <v-btn color="primary"   type="submit" class="mr-4 w-100" to="/chartView">
+                ADMIN
+              </v-btn> -->
+              <!-- <v-btn color="primary"   type="submit" class="mr-4 w-100" to="/chartView">
+                ADMIN
+              </v-btn> -->
+              </v-card-text>
+            </v-form>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </section>
+</template>
+<script>
+import { mapActions } from "pinia";
+import { useUserStore } from "@/store/User";
+export default {
+  components: {
+
+  },
+  data() {
+    return {
+      username: "kminchelle",
+      password: "0lelplR",
+    };
+  },
+  methods: {
+    submit() {
+      this.login(this.username, this.password);
+    },
+    ...mapActions(useUserStore, ["login"]),
+  },
+};
+</script>
+<style>
+.login {
+  background-color: #f8f9fa;
+}
+</style>

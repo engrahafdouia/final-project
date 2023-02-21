@@ -34,10 +34,7 @@
 
   </v-carousel>
 
-  <!-- <StudentInfo/>
 
-
-  <TimelineSection/> -->
 </template>
 
 <script>
@@ -46,10 +43,12 @@
 
 // import TimelineSection from './TimelineSection.vue';
 // import StudentInfo from './StudentInfo.vue';
+// import TechnologiesSection from './TechnologiesSection.vue';
+
 
 
   export default {
-    // components: { TimelineSection ,StudentInfo  },
+  //  ?components: { TimelineSection ,StudentInfo , TechnologiesSection },
     data() {
         return {
             items: [

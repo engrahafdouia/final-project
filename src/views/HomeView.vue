@@ -2,40 +2,36 @@
  <HeroSection title="Welcome To Our Studio!" >
  </HeroSection>
  <MostSection/>
-<ServiceSection/>
 
 
-<TeamSection/>
-<SponserSection/>
-<TestimonialsSection />
-<FeaturesSection/>
-<ContactSection/>
-  <FooterSection/>
+
+<!-- <TeamSection/> -->
+<SwiperSection/>
+<TesSection/>
+<AccordionSection/>
+
 </template>
 <script>
   import HeroSection from '@/components/HeroSection.vue';
-import ServiceSection from '@/components/ServiceSection.vue';
+import MostSection from '@/components/MostSection.vue';
+import AccordionSection from '@/components/AccordionSection.vue';
+import TesSection from '@/components/TesSection.vue';
+import SwiperSection  from '@/components/SwiperSection.vue';
 
 
-import TeamSection from '@/components/TeamSection.vue';
-import TestimonialsSection from '@/components/TestimonialsSection.vue';
-import SponserSection from '@/components/SponserSection.vue';
-import ContactSection from '@/components/ContactSection.vue';
-import FeaturesSection from '@/components/FeaturesSection.vue';
 import FooterSection from '@/components/FooterSection.vue';
 
   export default {
       components: {
 
     HeroSection,
-    ServiceSection,
+    MostSection,
 
+    SwiperSection,
 
-    TeamSection,
-    TestimonialsSection,
-    SponserSection,
-    ContactSection,
-    FeaturesSection,
+    TesSection,
+    AccordionSection,
+
     FooterSection
 },
       data(){

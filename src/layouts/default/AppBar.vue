@@ -210,9 +210,168 @@
 
         </template> -->
   </v-app-bar>
+  <v-navigation-drawer v-model="drawer" temporary width="250" height="100vh">
+    <v-list nav dense>
+      <!-- <v-btn icon @click.native="dialog = false">
+                <v-icon>mdi-close</v-icon>
+              </v-btn> -->
+      <v-list-item  class="bg-purpleme"
+        prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
+        v-if="isLoggedIn"
+        nav
+      >
+      <v-btn rounded variant="text" to="/profile" v-if="isLoggedIn">
+        {{ user.firstName }}
+
+
+                </v-btn>
+
+                <!-- <v-btn rounded variant="text" to="/admin">
+                  {{ $t("message.Admin") }}
+                </v-btn> -->
+                <v-btn v-if="user.username === 'kminchelle'" rounded variant="text" to="/admin">Dashboard  </v-btn>
+
+                <v-divider class="my-3"></v-divider>
+
+        <!-- <template v-slot:append>
+            <v-btn
+              variant="text"
+              icon="mdi-chevron-left"
+              @click.stop="rail = !rail"
+            ></v-btn>
+          </template> -->
+      </v-list-item>
+      <v-list-item to="/" class="myicon"
+        ><v-icon>mdi-home</v-icon> {{ $t("message.Home") }}</v-list-item
+      >
+      <v-list-item to="/about" class="myicon">
+        <v-icon>mdi-earth</v-icon> {{ $t("message.About") }}</v-list-item
+      >
+      <v-list-item to="/products" class="myicon"
+        ><v-icon>mdi-database</v-icon> {{ $t("message.Products") }}</v-list-item
+      >
+      <v-list-item to="/contact" class="myicon">
+        <v-icon>mdi-phone</v-icon> {{ $t("message.Contact") }}</v-list-item
+      >
+      <!-- <v-list-item  class="myicon"> <v-icon >mdi-earth</v-icon> Settings</v-list-item> -->
+      <v-list-group value="Actions">
+        <template v-slot:activator="{ props }">
+          <v-list-item v-bind="props" prepend-icon="mdi-earth">{{
+            $t("message.settings")
+          }}</v-list-item>
+        </template>
+
+        <v-list-item @click="toggleLocale">
+          {{ $i18n.locale === "en" ? "English" : "Arabic" }}
+        </v-list-item>
+      </v-list-group>
+      <v-list-item to="/cart">
+        <v-icon>mdi-cart</v-icon>{{ $t("message.Cart") }}
+      </v-list-item>
+      <v-list-item>
+        <!-- <v-btn class="login">login</v-btn> -->
+
+        <!-- <v-btn rounded="pill" class="bg-purpleme text-right" to="/login">
+          {{ $t("message.Login") }}<v-icon>mdi-account</v-icon>
+        </v-btn> -->
+        <v-btn
+        rounded="pill" class="bg-purpleme "
+                  variant="text"
+                  v-if="isLoggedIn"
+                  to="/"
+                  @click="logout"
+                >
+                  {{ $t("message.logout") }}
+                </v-btn>
+                <v-btn  rounded="pill" class="bg-purpleme text-right" v-else variant="text" to="/login">
+                  {{ $t("message.Login") }}
+                </v-btn>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 
+<script >
+import { useTheme } from "vuetify";
+import { mapState } from "pinia";
+import { mapActions } from "pinia";
+import { useCartStore } from "@/store/Cart";
+import { useUserStore } from "@/store/User";
+export default{
+  components:{
 
+  },
+  setup() {
+    const theme = useTheme();
+
+    return {
+      theme,
+      toggleTheme: () =>
+        (theme.global.name.value = theme.global.current.value.dark
+          ? "light"
+          : "dark"),
+    };
+  },
+  data() {
+    return {
+      expand: false,
+      expand2: false,
+      index: 0,
+      image: null,
+      images: [
+        {
+          id: 1,
+          src: "../../../public/img/logo_black.svg",
+          alt: "Natural Grove Green Trees Path",
+        },
+        {
+          id: 2,
+          src: "../../../public/img/Logo White-p-500.png",
+          alt: "stockafbeelding cascades in nationaal park plitvice",
+        },
+      ],
+
+      categories: ["profile", "logout"],
+      drawer: false,
+      dialog: false,
+      tab: null,
+      // items: ["Home", "About", "Products", "Contact us"],
+      rail: true,
+      // items: [
+      //   { title: 'Click Me1' },
+      //   { title: 'Click Me2' },
+      //   { title: 'Click Me3' },
+      //   { title: 'Click Me4' },
+      // ],
+      cruds: [
+        ["Arabic", "mdi-plus-outline"],
+        ["English", "mdi-alpha-e"],
+      ],
+    };
+  },
+  mounted() {
+    this.switchImage();
+  },
+  computed: {
+    ...mapState(useCartStore, ["itemsCount"]),
+    ...mapState(useUserStore, ["isLoggedIn", "user"]),
+  },
+  methods: {
+    ...mapActions(useUserStore, ["logout"]),
+    toggleLocale() {
+      this.$i18n.locale = this.$i18n.locale === "ar" ? "en" : "ar";
+      this.$vuetify.locale.current =
+        this.$vuetify.locale.current === "ar" ? "en" : "ar";
+    },
+
+    switchImage() {
+      this.image = this.images[this.index];
+      this.index = (this.index + 1) % this.images.length;
+    },
+  },
+}
+  //
+</script>
 <style>
 .mytab:hover {
   color: #2333b0;

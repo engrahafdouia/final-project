@@ -8,11 +8,11 @@
                     <v-card-subtitle>{{ item . price }} $ - {{ item . category }}</v-card-subtitle>
                     <v-card-text>{{ item . description }}</v-card-text>
                     <v-card-actions>
-                        <v-btn color="error" text @click="removeItem(i)">
-                            <v-icon large color="error">
+                        <v-btn rounded="pills"  text @click="removeItem(i)">
+                            <v-icon large color="error" >
                                 mdi-delete
                             </v-icon>
-                            removeItem
+                            remove
                         </v-btn>
                     </v-card-actions>
                 </v-card>
